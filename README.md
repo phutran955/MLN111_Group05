@@ -4,6 +4,29 @@ Web game narrative choice bằng tiếng Việt, khám phá mâu thuẫn giữa 
 
 ## Chạy dự án
 
+Chỉ có **một thư mục dự án và một repository Git**. Chạy mọi lệnh tại thư mục chứa `package.json`, `vite.config.ts` và `vercel.json`:
+
+```text
+MLN111_Group05/
+  .git/                 # Repo GitHub và lịch sử main
+  docs/                 # Ảnh giao diện và kết quả kiểm tra
+  public/assets/        # Hình ảnh, nhân vật và âm thanh
+  scripts/              # Công cụ tạo placeholder
+  src/                  # Toàn bộ mã nguồn game
+  .gitattributes
+  .gitignore
+  index.html
+  package.json
+  package-lock.json
+  tsconfig.json
+  vite.config.ts
+  eslint.config.js
+  vercel.json
+  README.md
+```
+
+`node_modules/`, `dist/` và `*.tsbuildinfo` là dữ liệu tự sinh, được Git bỏ qua. Không clone repository thêm một lần bên trong thư mục này.
+
 Yêu cầu Node.js **22.12+** (hoặc 20.19+) và npm.
 
 ```bash
@@ -131,7 +154,9 @@ SHARE RESULT dùng Web Share API; nếu không hỗ trợ sẽ copy text vào cl
 2. Framework: **Vite**. Build: **npm run build**. Output: **dist**. Install: **npm install** hoặc **npm ci**.
 3. Không cần environment variables, serverless functions hay database.
 
-`vercel.json` đã khai báo framework/build/output. Dự án chưa được publish lên một tài khoản Vercel; production build sẵn sàng deploy.
+`vercel.json` đã khai báo framework/build/output. Production build sẵn sàng deploy; trạng thái bản online được kiểm tra trong dashboard Vercel của bạn.
+
+Khi import repo `phutran955/MLN111_Group05`, đặt **Root Directory ở gốc repo (để trống)**. Production Branch là **main**. Cấu hình build không cần thêm thư mục `MLN111_Group05` vào đường dẫn vì mã nguồn đã nằm ngay gốc repository. Sau khi push, kiểm tra deployment của đúng commit mới trong Vercel.
 
 ## Kiểm tra giao diện
 

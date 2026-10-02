@@ -23,3 +23,9 @@ Browser checks:
 Known constraint: the exact supplied scoring makes L+T odd (9 or 11) on every complete path. Four ending branches are implemented, but the L=T ending cannot be reached without changing a supplied rule. Separate tests verify its calculation branch. No scoring rules were changed.
 
 Not measured: Lighthouse scores. Not performed: publishing to an external Vercel account. Vercel build/output configuration is included.
+
+## Repository consolidation — 2026-10-02
+
+The duplicate nested `MLN111_Group05/` clone was consolidated into the workspace root. All 67 shared tracked files matched by hash before consolidation. The clone's `.gitattributes`, `main` history and GitHub origin were preserved. The previous root Git metadata and duplicate files were moved to a temporary recovery backup outside the project. The workspace now has one Git repository and one copy of the game source. Commands should be run in the root containing `package.json`; Vercel Root Directory should remain the repository root.
+
+After consolidation: `npm run lint`, all 7 tests (including the 1,024 paths), and `npm run build` passed in the workspace root.

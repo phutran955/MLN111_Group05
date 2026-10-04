@@ -1,7 +1,41 @@
 const root = '/assets';
 export const assets = {
-  backgrounds: Object.fromEntries(['university', 'graduation', 'bedroom', 'job_search', 'office', 'meeting_room', 'training_room', 'ai_workspace', 'manager_office'].map(name => [name, `${root}/backgrounds/${name}.svg`])) as Record<string, string>,
+  backgrounds: {
+    landing: `${root}/backgrounds/landing.png`,
+    scene_01: `${root}/backgrounds/scene_01.png`,
+    scene_02: `${root}/backgrounds/scene_02.png`,
+    scene_03: `${root}/backgrounds/scene_03.png`,
+    scene_04: `${root}/backgrounds/scene_04.png`,
+    scene_05: `${root}/backgrounds/scene_05.png`,
+    scene_06: `${root}/backgrounds/scene_06.png`,
+    scene_07: `${root}/backgrounds/scene_07.png`,
+    scene_08: `${root}/backgrounds/scene_08.png`,
+    scene_09: `${root}/backgrounds/scene_09.png`,
+    scene_10: `${root}/backgrounds/scene_10.png`,
+    // Legacy mapping support
+    university: `${root}/backgrounds/landing.png`,
+    graduation: `${root}/backgrounds/scene_01.png`,
+    office: `${root}/backgrounds/scene_02.png`,
+    meeting_room: `${root}/backgrounds/scene_03.png`,
+    bedroom: `${root}/backgrounds/scene_05.png`,
+    job_search: `${root}/backgrounds/scene_01.png`,
+    ai_workspace: `${root}/backgrounds/scene_06.png`,
+    training_room: `${root}/backgrounds/scene_08.png`,
+    manager_office: `${root}/backgrounds/scene_10.png`,
+    // Endings
+    ending_resolution: `${root}/backgrounds/ending_resolution.png`,
+    ending_theory: `${root}/backgrounds/ending_theory.png`,
+    ending_practice: `${root}/backgrounds/ending_practice.png`,
+    ending_avoidance: `${root}/backgrounds/ending_avoidance.png`,
+    ending_unresolved: `${root}/backgrounds/ending_unresolved.png`,
+  } as Record<string, string>,
   characters: Object.fromEntries(['player_student', 'player_employee', 'player_manager', 'manager', 'coworker_1', 'coworker_2', 'hr'].map(name => [name, `${root}/characters/${name}.svg`])) as Record<string, string>,
+  decorations: {
+    about_header: `${root}/decorations/about_header.png`,
+    about_course: `${root}/decorations/about_course.png`,
+    theory_strip: `${root}/decorations/theory_strip.png`,
+    share_celebration: `${root}/decorations/share_celebration.png`,
+  },
   audio: { hover: `${root}/audio/hover.wav`, click: `${root}/audio/click.wav`, confirm: `${root}/audio/confirm.wav`, score_up: `${root}/audio/score_up.wav`, score_down: `${root}/audio/score_down.wav`, transition: `${root}/audio/transition.wav`, ending: `${root}/audio/ending.wav` },
   music: `${root}/music/ambient.wav`,
 };

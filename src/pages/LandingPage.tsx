@@ -11,7 +11,7 @@ export default function LandingPage({ state, onStart, onContinue, onHelp, onAbou
         <h1>GIỮA HAI<br/><span>THẾ GIỚI</span><span className="title-period">.</span></h1>
         <div className="hero-subtitle"><span/>Từ giảng đường đến thực tiễn</div>
         <p className="hero-description">Mỗi lựa chọn định hình cách bạn đối mặt với khoảng cách giữa điều đã học và điều thực tế đòi hỏi.</p>
-        <div className="hero-actions">{state.gameStarted ? <><button className="primary-button" onClick={onContinue}><Play size={17}/>{state.gameCompleted ? 'TIẾP TỤC HÀNH TRÌNH · XEM KẾT QUẢ' : 'TIẾP TỤC HÀNH TRÌNH'}<ArrowRight size={19}/></button><button className="secondary-button" onClick={onStart}>HÀNH TRÌNH MỚI</button></> : <button className="primary-button" onClick={onStart}>START JOURNEY<ArrowRight size={20}/></button>}</div>
+        <div className="hero-actions">{state.gameStarted ? <><button className="primary-button" onClick={onContinue}><Play size={17}/>{state.gameCompleted ? 'TIẾP TỤC HÀNH TRÌNH · XEM KẾT QUẢ' : 'TIẾP TỤC HÀNH TRÌNH'}<ArrowRight size={19}/></button><button className="secondary-button" onClick={onStart}>HÀNH TRÌNH MỚI</button></> : <button className="primary-button" onClick={onStart}>BẮT ĐẦU HÀNH TRÌNH CỦA RIÊNG BẠN<ArrowRight size={20}/></button>}</div>
         <div className="hero-links"><button onClick={onHelp}>HOW TO PLAY</button><span>/</span><button onClick={onAbout}>ABOUT</button></div>
         <div className="hero-details"><span><Clock3 size={14}/>10–15 phút</span><span><GitMerge size={14}/>10 bước ngoặt</span><span>04 kết thúc</span></div>
       </motion.div>
